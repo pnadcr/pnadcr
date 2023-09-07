@@ -25,14 +25,6 @@
 #' @importFrom stats as.formula
 #'
 #' @return gt table
-#'
-#' @examples
-#' #For characters
-#' \donttest{pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "mean", group = ~V2010,
-#' cluster = list('Branca' = 'Branca', 'Negra' = c('Preta', 'Parda'), 'Outros' = c('Amarela', 'Indigena')))}
-#' #For numbers
-#' \donttest{pnadc_group(~V403312, ~V2009, 2019, 1, calculation = "mean",
-#' group = ~V2009, cluster = c(0, 100, 5))}
 pnadc_group <- function(variable, by, year, quartile, calculation, group, cluster, path = FALSE, export = FALSE) {
   load_design <- function(year, quartile, path) {
     design_file <- fs::path_home(paste("Design_PNADc", year, quartile, sep = "_"))

@@ -10,7 +10,7 @@ Description: Tables and graphs of the Continuous National Sample Survey by House
 License: Apache License (== 2.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Suggests: 
     knitr,
     rmarkdown,

@@ -45,11 +45,3 @@ Regroups a numeric or non-numeric variable from the PNADc for one or more variab
 
 \href{https://github.com/migux14/PNADc.table/tree/main/Documents\%20PT-BR}{Documentation in Portuguese - BR}
 }
-\examples{
-#For characters
-\donttest{pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "mean", group = ~V2010,
-cluster = list('Branca' = 'Branca', 'Negra' = c('Preta', 'Parda'), 'Outros' = c('Amarela', 'Indigena')))}
-#For numbers
-\donttest{pnadc_group(~V403312, ~V2009, 2019, 1, calculation = "mean",
-group = ~V2009, cluster = c(0, 100, 5))}
-}

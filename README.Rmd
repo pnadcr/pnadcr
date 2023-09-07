@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# PNADc.table
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/migux14/PNADc.table/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/migux14/PNADc.table/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+The goal of PNADc.table is to make PNADc tables in an easy and interesting way
+
+## Installation
+
+You can install the development version of PNADc.table from [GitHub](https://github.com/) with:
+      
+
+``` r
+# install.packages("devtools")
+devtools::install_github("migux14/PNADc.table")
+```
+
+## Example
+
+```{r example}
+library(PNADc.table)
+pnadc_download(2019,1) #downloading the 2019 PNADc first quartile
+
+pnadc_mean(~V403312, ~UF, 2019, 1) #Creating a table of mean monthly gross income by UF (Federation Unit) from the 2019.1 PNADc survey
+
+```
+
+Now let's make a bar graph of the last table
+
+```{r example}
+pnadc_graph(~V403312, ~UF, 2019, 1, calculation = "mean", classifier = "V403312", type = 1)
+```
+

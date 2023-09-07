@@ -1,0 +1,31 @@
+Package: pnadcr
+Title: Continuous National Household Sample Survey Data Tabulation package
+Version: 1.0.0
+Authors@R: c(
+    person("Miguel", "Conforto", , "miguel.conforto1@gmail.com", role = c("aut", "cre")),
+    person("Cássio", "Almeida", , "cassiofpa@gmail.com ", role = "aut"),
+    person("Sandra", "Canton", , "sandra.cardoso@ibge.gov.br", role = "aut")
+  )
+Description: Tables and graphs of the Continuous National Sample Survey by Household.
+License: Apache License (== 2.0)
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    fs,
+    ggplot2,
+    gt,
+    magrittr,
+    PNADcIBGE,
+    stats,
+    survey,
+    utils,
+    webshot2
+URL: https://github.com/pnadcr/pnadcr
+BugReports: https://github.com/pnadcr/pnadcr/issues

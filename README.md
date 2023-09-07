@@ -4,14 +4,6 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # pnadcr
 
@@ -19,11 +11,11 @@ The goal of pnadcr is to make PNADc tables in an easy and interesting way
 
 ## Installation
 
-You can install the development version of pnadcr from [GitHub](https://github.com/) with:
+You can install the development version of pnadcr from [GitHub](https://github.com/pnadcr/pnadcr) with:
       
 
-``` r
-# install.packages("devtools")
+```{r}
+install.packages("devtools")
 devtools::install_github("pnadcr/pnadcr")
 ```
 

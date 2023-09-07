@@ -61,7 +61,7 @@ The function returns a **gt table** within the R environment if the **export opt
 <div style="text-align: justify">
 In this example we are going to create a table of the mean of the monthly gross income (V403312) separated by age group of 5 in 5 years of the PNADc of 2019.1 calculating that the user did not use the _pnadc_download_ function to download the files and also does not want to export the table .
 
-```{r}
+```r
 pnadc_group(~V403312, ~V2009, 2019, 1, calculation = "mean", group = ~V2009, cluster = c(0, 100, 5))
 #The By argument uses the Age variable (V2009).
 #The selected calculation must be "mean" to generate the means table.
@@ -72,7 +72,7 @@ pnadc_group(~V403312, ~V2009, 2019, 1, calculation = "mean", group = ~V2009, clu
 
 <div style="text-align: justify">
 For cases where the By has more than one variable, we would have the following example:
-```{r}
+```r
 pnadc_group(~V403312, ~V2009+UF, 2019, 1, calculation = "mean", group = ~V2009, cluster = c(0, 100, 5))
 # We add UF to the By
 #The table generated will be the Gross Income (V403312) x UF x Age Group
@@ -81,7 +81,7 @@ pnadc_group(~V403312, ~V2009+UF, 2019, 1, calculation = "mean", group = ~V2009, 
 <div style="text-align: justify">
 Now we will create an example to group the Races (V2010) as follows: White = White, Black = Black and Brown and Others = Yellow, Indigenous and Ignored. Now the **cluster** will be a **list**
 
-```{r}
+```r
 pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "mean", group = ~V2010, cluster = list("Negra" = c("Preta","Parda"), "Outras" = c("Amarela","Indígena","Ignorado")))
 #Must make a list of vectors for the cluster argument.
 #New names must come first and then the names you want to replace.
@@ -90,7 +90,7 @@ pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "mean", group = ~V2010, clu
 <div style="text-align: justify">
 Let's redo the previous tables, but now with the **percentage**:
 
-```{r}
+```r
 pnadc_group(~V403312, ~V2009+UF, 2019, 1, calculation = "percentage", group = ~V2009, cluster = c(0, 100, 5))
 
 pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "percentage", group = ~V2010, cluster = list("Negra" = c("Preta","Parda"), "Outras" = c("Amarela","Indígena","Ignorado")))
@@ -100,7 +100,7 @@ pnadc_group(~V403312, ~V2010, 2019, 1, calculation = "percentage", group = ~V201
 If the objective is to create a **Data Frame in R**, the user must assign it to an object, that is, an object will be created in the R environment and it will receive the final result of the function.
 <br/>Although it sounds strange, this task is actually quite simple. Let's take the previous example to create the Data Frame
 
-```{r}
+```r
 table_pnadc_2019_1 <- pnadc_group(~V403312, ~V2009+UF, 2019, 1, calculation = "percentage", path = "C:/PNADc_Data", group = ~V2009, cluster = c(0, 100, 5), export = "df")
 #As "df" was selected in the "export" argument, the function will return a Data Frame.
 #We assign to the object "table_pnadc_2019_1" the Data Frame of the function, in this way it will be saved so it can be used later. view(table_pnadc_2019_1)

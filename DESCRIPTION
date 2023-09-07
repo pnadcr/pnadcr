@@ -26,11 +26,6 @@ Imports:
     stats,
     survey,
     utils,
-    webshot2,
-    Rcpp,
-    later,
-    fastmap,
-    ps,
-    promises
+    webshot2
 URL: https://github.com/pnadcr/pnadcr
 BugReports: https://github.com/pnadcr/pnadcr/issues

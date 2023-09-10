@@ -2,8 +2,8 @@
 #' pnadc_group
 #'
 #' @description Regroups a numeric or non-numeric variable from the PNADc for one or more variables. Tables can be generated in \R or exported using the "export" option
-#' @description [Documentation in English](https://github.com/migux14/PNADc.table/tree/main/vignettes)
-#' @description [Documentation in Portuguese - BR](https://github.com/migux14/PNADc.table/tree/main/Documents%20PT-BR)
+#' @description [Documentation in English](https://github.com/pnadcr/pnadcr/tree/master/documentation)
+#' @description [Documentation in Portuguese - BR](https://github.com/pnadcr/pnadcr/tree/master/documentation/PT-BR)
 #'
 #' @param variable Variable of interest that will be used to calculate the data. It must be a formula, that is, have ~ in front of the variable.
 #' @param by Variable that defines the aggregation level of the variable of interest. It can contain more than one level of aggregation. It must be a formula, i.e. have ~ in front of the variable.
